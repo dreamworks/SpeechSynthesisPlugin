@@ -131,7 +131,7 @@ public class SpeechSynthesis extends CordovaPlugin implements OnInitListener, On
                 this.startupCallbackContext = callbackContext;
                 if (mTts == null) {
                     state = SpeechSynthesis.INITIALIZING;
-                    mTts = new TextToSpeech(cordova.getActivity().getApplicationContext(), this);
+                    mTts = new TextToSpeech(cordova.getActivity().getApplicationContext(), this, "com.google.android.tts");
                 }else{
             		getVoices(callbackContext);
                 }
